@@ -22,15 +22,14 @@ struct GestionView: View {
                     // FILA 1
                     HStack{
                         
-                        NavigationLink(destination: OrderView(selectedTable: 1, availability: true)){
+                        NavigationLink(destination: OrderView(selectedTable: 1, pedido: false)){
                             
                             MesaView(iconColor: Color.orange, seat: 4, available: "Disponible", number: 1)
                         }
                         
-                        NavigationLink(destination: OrderView(selectedTable: 2, availability: false)){
+                        NavigationLink(destination: OrderView(selectedTable: 2, pedido: true)){
                             
                             MesaView(iconColor: Color.blue, seat: 2, available: "Ocupada", number: 2)
-                            
                             
                             
                         }
@@ -40,12 +39,12 @@ struct GestionView: View {
                     // FILA 2
                     HStack{
                         
-                        NavigationLink(destination: OrderView(selectedTable: 3, availability: false)){
+                        NavigationLink(destination: OrderView(selectedTable: 3, pedido: false)){
                             
-                            MesaView(iconColor: Color.teal, seat: 3, available: "Reservada", number: 3)
+                            MesaView(iconColor: Color.teal, seat: 3, available: "Ocupada", number: 3)
                         }
                         
-                        NavigationLink(destination: OrderView(selectedTable: 4, availability: true)){
+                        NavigationLink(destination: OrderView(selectedTable: 4, pedido: false)){
                             
                             MesaView(iconColor: Color.pink, seat: 6, available: "Disponible", number: 4)
                         }
