@@ -11,7 +11,7 @@ import SwiftUI
 struct ProySemestral_iOS2025App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
         }
     }
 }
