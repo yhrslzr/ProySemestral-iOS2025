@@ -17,34 +17,39 @@ struct MesaView: View {
     var body: some View {
         VStack(){
             HStack(){
-                Spacer()
                 Text("Asientos: \(seat)")
+                    .font(.system(size: 10))
                     .padding(.vertical, 4)
                     .padding(.horizontal, 12)
                     .background(iconColor)
                     .foregroundColor(.white)
-                    .cornerRadius(2)
+                    .cornerRadius(10)
                     .frame( maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()
+                
                 Text(available)
+                    .font(.system(size: 10))
                     .padding(.vertical, 4)
                     .padding(.horizontal, 12)
                     .background(iconColor)
                     .foregroundColor(.white)
-                    .cornerRadius(2)
+                    .cornerRadius(10)
                     .frame( maxWidth: .infinity, alignment: .trailing)
                 
             }
             
+            Spacer()
+            
             Image(systemName: "table.furniture")
-                .font(.system(size: 90, weight: .light, design: .default))
+                .font(.system(size: 40, weight: .light, design: .default))
                 .foregroundColor(iconColor)
                 .aspectRatio(contentMode: .fit )
-                .frame(width: 120, height: 100)
+                .frame(width: 20, height: 20)
             
-            Text("Mesa #\(number)")
-                .font(.largeTitle)
+            Text("\(number)° Mesa")
+                .font(.system(size: 25, weight: .bold, design: .default))
+                .foregroundColor(Color.black)
                 .lineLimit(1)
                 .truncationMode(.middle)
                 .padding(.bottom)
@@ -55,5 +60,5 @@ struct MesaView: View {
 }
 
 #Preview {
-    MesaView(iconColor: Color.red, seat: 6, available: "Disponible", number: 1)
+    MesaView(iconColor: Color.red, seat: 1, available: "Disponible", number: 1)
 }

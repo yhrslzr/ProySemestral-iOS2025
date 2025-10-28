@@ -15,11 +15,42 @@ struct GestionView: View {
     @State var number: Int = 0
     
     var body: some View {
-        ScrollView{
     
+        NavigationStack{
             ScrollView(.vertical){
-                HStack{
-                    MesaView(iconColor: Color.yellow, seat: 4, available: "Disponible", number: 1)
+                VStack{
+                    // FILA 1
+                    HStack{
+                        
+                        NavigationLink(destination: OrderView(selectedTable: 1, availability: true)){
+                            
+                            MesaView(iconColor: Color.orange, seat: 4, available: "Disponible", number: 1)
+                        }
+                        
+                        NavigationLink(destination: OrderView(selectedTable: 2, availability: false)){
+                            
+                            MesaView(iconColor: Color.blue, seat: 2, available: "Ocupada", number: 2)
+                            
+                            
+                            
+                        }
+                        
+                    }
+                    
+                    // FILA 2
+                    HStack{
+                        
+                        NavigationLink(destination: OrderView(selectedTable: 3, availability: false)){
+                            
+                            MesaView(iconColor: Color.teal, seat: 3, available: "Reservada", number: 3)
+                        }
+                        
+                        NavigationLink(destination: OrderView(selectedTable: 4, availability: true)){
+                            
+                            MesaView(iconColor: Color.pink, seat: 6, available: "Disponible", number: 4)
+                        }
+                        
+                    }
                 }
             }
         }

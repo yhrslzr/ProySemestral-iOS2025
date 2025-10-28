@@ -12,7 +12,9 @@ struct MesaViewModifier: ViewModifier {
     var bgColor: Color = .white
     
     func body(content: Content) -> some View {
-        content.padding().frame(maxWidth: .infinity, alignment: .leading)
+        content.padding()
+//            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(width: 200, height: 150)
             .background(bgColor)
             .cornerRadius(12)
             .overlay(
