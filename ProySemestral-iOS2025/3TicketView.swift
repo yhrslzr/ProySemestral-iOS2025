@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TicketView: View {
     var body: some View {
-        Text("Aquí se genera el ticket / cuenta")
+        Text("Aquí se genera el ticket / cuenta, :)")
     }
 }
 
